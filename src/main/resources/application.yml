@@ -1,0 +1,60 @@
+spring:
+
+  application:
+    name: maozinha
+
+  profiles:
+    default: dev
+
+  jackson:
+    time-zone: UTC
+
+    deserialization:
+      fail-on-unknown-properties: true
+
+  jpa:
+    open-in-view: false
+
+    hibernate:
+      ddl-auto: validate
+
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  shutdown: graceful
+
+management:
+
+  endpoints:
+
+    web:
+
+      exposure:
+
+        include:
+          - health
+          - info
+
+  endpoint:
+
+    health:
+
+      show-details: never
+
+springdoc:
+
+  api-docs:
+    enabled: false
+
+  swagger-ui:
+    enabled: false
+
+logging:
+
+  level:
+
+    root: INFO
+
+
